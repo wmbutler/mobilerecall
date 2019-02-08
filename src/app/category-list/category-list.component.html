@@ -1,0 +1,6 @@
+<mat-nav-list>
+    <a routerLink="/{{ category.id }}" mat-list-item *ngFor="let category of categories">
+      <mat-icon matListIcon>{{ category.icon }}</mat-icon>
+      <h3 matLine> {{category.name}} </h3>
+    </a>
+  </mat-nav-list>
