@@ -1,4 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+}
+
+mat-card.new{
+  height: 70px;
+}
+
+mat-icon.new{
+  font-size: 36px;
+}
+
+mat-card {
+  margin-bottom: 8px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+mat-form-field {
+  width: 100%;
+  text-align: left;
+}
+
+.matInput {
+  font-size: 48px
+}
+
+img {
+  width: 100%;
+}
+
+

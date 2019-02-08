@@ -1,3 +1,22 @@
-<p>
-  movie-list works!
-</p>
+<mat-card class="new">
+    <mat-form-field appearance="outline">
+      <mat-label>Remember this Movie !</mat-label>
+      <input #new type="text" matInput [formControl]="findMovie" [matAutocomplete]="auto">
+    </mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">{{option}}</mat-option>
+    </mat-autocomplete>
+</mat-card>
+<mat-card (click)="flip()" *ngFor="let movie of movies">
+  <mat-card-title  *ngIf="front" >{{ movie.Title }}</mat-card-title>
+  <mat-card-subtitle *ngIf="front">
+    {{ movie.Rated }}, {{ movie.Released }}, {{ movie.Runtime }}<br>
+    {{ movie.Genre }} directed by {{ movie.Director }}
+  </mat-card-subtitle>
+  <mat-card-content *ngIf="front" >
+    {{ movie.Plot }}
+  </mat-card-content>
+  <mat-card-content *ngIf="!front">
+      <img src="{{ movie.Poster}}">
+  </mat-card-content>
+</mat-card>

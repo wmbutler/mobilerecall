@@ -8,14 +8,13 @@ import { Category } from '../api.service';
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent implements OnInit {
-  title = 'pwademo';
   categories: Array<Category>;
   constructor(private apiService: ApiService) {}
   ngOnInit() {
     this.fetchData();
   }
   fetchData() {
-    this.apiService.fetch().subscribe(
+    this.apiService.getCategories().subscribe(
       (data) => {
         console.log(data);
         this.categories = data.categories;

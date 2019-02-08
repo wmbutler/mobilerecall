@@ -11,9 +11,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule, MatAutocompleteModule } from '@angular/material';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { CategoryListComponent } from './category-list/category-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,7 +34,10 @@ import { CategoryListComponent } from './category-list/category-list.component';
     MatButtonModule,
     MatListModule,
     MatIconModule,
-    routingModule
+    routingModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
